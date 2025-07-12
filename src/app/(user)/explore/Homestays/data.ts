@@ -1,0 +1,42 @@
+export const homestays = [
+  {
+    name: "Community Homestay in Panauti",
+    description: "Experience authentic Newari hospitality and local traditions in Panauti.",
+    image: "/homestays/panauti.jpg",
+    location: "Panauti",
+    region: "Bagmati",
+    tags: ["newar", "community"],
+  },
+  {
+    name: "Gurung Homestay in Ghandruk",
+    description: "Stay with Gurung families in a scenic mountain village with cultural dances.",
+    image: "/homestays/ghandruk.jpg",
+    location: "Ghandruk",
+    region: "Gandaki",
+    tags: ["gurung", "mountain"],
+  },
+  {
+    name: "Tharu Homestay in Chitwan",
+    description: "Live in traditional mud houses and enjoy Tharu food and folk performances.",
+    image: "/homestays/chitwan-tharu.jpg",
+    location: "Chitwan",
+    region: "Lumbini",
+    tags: ["tharu", "jungle"],
+  },
+  {
+    name: "Sherpa Homestay in Phaplu",
+    description: "Discover Sherpa culture near the Everest region in a cozy hill homestay.",
+    image: "/homestays/phaplu.jpg",
+    location: "Phaplu",
+    region: "Solukhumbu",
+    tags: ["sherpa", "mountain"],
+  },
+  {
+    name: "Tamang Homestay in Gatlang",
+    description: "Stay in a stone house, taste yak cheese, and join Tamang cultural nights.",
+    image: "/homestays/gatlang.jpg",
+    location: "Gatlang",
+    region: "Rasuwa",
+    tags: ["tamang", "hills"],
+  },
+];
