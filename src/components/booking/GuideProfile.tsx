@@ -17,7 +17,7 @@ import {
   Mail
 } from 'lucide-react';
 import { Button } from '@/components/booking/button';
-
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/booking/card';
 import { Guide } from '@/app/(user)/book/guides/types';
 
 interface GuideProfileProps {
@@ -27,9 +27,7 @@ interface GuideProfileProps {
   onBookNow: (guide: Guide) => void;
 }
 
-import React from 'react';
-
-const GuideProfile: React.FC<GuideProfileProps> = ({ guide, isOpen, onClose, onBookNow }) => {
+export default function GuideProfile({ guide, isOpen, onClose, onBookNow }: GuideProfileProps) {
   if (!isOpen || !guide) return null;
 
   return (
@@ -42,7 +40,7 @@ const GuideProfile: React.FC<GuideProfileProps> = ({ guide, isOpen, onClose, onB
             variant="ghost" 
             size="icon" 
             onClick={onClose}
-            className="absolute top-4 right-4 bg-white/20 hover:bg-white/30 text-white"
+            className="absolute top-4 right-4 bg-white/20 hover:bg-white/30 "
           >
             <X className="w-5 h-5" />
           </Button>
@@ -64,11 +62,11 @@ const GuideProfile: React.FC<GuideProfileProps> = ({ guide, isOpen, onClose, onB
                   <Shield className="w-5 h-5 text-secondary" />
                 )}
               </div>
-              <div className="flex items-center gap-1 text-white/90 mb-2">
+              <div className="flex items-center gap-1 text-black/90 mb-2">
                 <MapPin className="w-4 h-4" />
                 <span>{guide.location}</span>
               </div>
-              <div className="flex items-center gap-4 text-white/90 text-sm">
+              <div className="flex items-center gap-4 text-black/90 text-sm">
                 <div className="flex items-center gap-1">
                   <Star className="w-4 h-4 fill-accent text-accent" />
                   <span className="font-semibold">{guide.rating}</span>
@@ -88,21 +86,21 @@ const GuideProfile: React.FC<GuideProfileProps> = ({ guide, isOpen, onClose, onB
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-6">
               {/* About */}
-              <div className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-                <div className="p-4 border-b">
-                  <h3 className="text-lg font-semibold mb-2">About Me</h3>
-                </div>
-                <div className="p-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle>About Me</CardTitle>
+                </CardHeader>
+                <CardContent>
                   <p className="text-muted leading-relaxed">{guide.aboutMe}</p>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
 
               {/* Services */}
-              <div className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-                <div className="p-4 border-b">
-                  <h3 className="text-lg font-semibold mb-2">Services Offered</h3>
-                </div>
-                <div className="p-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Services Offered</CardTitle>
+                </CardHeader>
+                <CardContent>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {guide.services.map((service) => (
                       <div key={service} className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg">
@@ -111,15 +109,15 @@ const GuideProfile: React.FC<GuideProfileProps> = ({ guide, isOpen, onClose, onB
                       </div>
                     ))}
                   </div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
 
               {/* Specialties */}
-              <div className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-                <div className="p-4 border-b">
-                  <h3 className="text-lg font-semibold mb-2">Specialties</h3>
-                </div>
-                <div className="p-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Specialties</CardTitle>
+                </CardHeader>
+                <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {guide.specialties.map((specialty) => (
                       <span
@@ -130,18 +128,18 @@ const GuideProfile: React.FC<GuideProfileProps> = ({ guide, isOpen, onClose, onB
                       </span>
                     ))}
                   </div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
 
               {/* Certifications */}
-              <div className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-                <div className="p-4 border-b">
-                  <h3 className="flex items-center gap-2 text-lg font-semibold mb-2">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
                     <Award className="w-5 h-5" />
                     Certifications & Qualifications
-                  </h3>
-                </div>
-                <div className="p-4">
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
                   <div className="space-y-2">
                     {guide.certifications.map((cert) => (
                       <div key={cert} className="flex items-center gap-2 p-2 border rounded-lg">
@@ -150,18 +148,18 @@ const GuideProfile: React.FC<GuideProfileProps> = ({ guide, isOpen, onClose, onB
                       </div>
                     ))}
                   </div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             </div>
 
             {/* Sidebar */}
             <div className="space-y-6">
               {/* Quick Stats */}
-              <div className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-                <div className="p-4 border-b">
-                  <h3 className="text-lg font-semibold mb-2">Quick Info</h3>
-                </div>
-                <div className="p-4 space-y-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Quick Info</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-muted">Price per day</span>
                     <span className="font-bold text-lg text-primary">${guide.price}</span>
@@ -186,15 +184,15 @@ const GuideProfile: React.FC<GuideProfileProps> = ({ guide, isOpen, onClose, onB
                     <Calendar className="w-4 h-4 text-muted" />
                     <span>Available {guide.availability.length} days/week</span>
                   </div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
 
               {/* Availability */}
-              <div className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-                <div className="p-4 border-b">
-                  <h3 className="text-lg font-semibold mb-2">Availability</h3>
-                </div>
-                <div className="p-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Availability</CardTitle>
+                </CardHeader>
+                <CardContent>
                   <div className="grid grid-cols-2 gap-2">
                     {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].map((day) => (
                       <div
@@ -209,14 +207,14 @@ const GuideProfile: React.FC<GuideProfileProps> = ({ guide, isOpen, onClose, onB
                       </div>
                     ))}
                   </div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
 
               {/* Action Buttons */}
               <div className="space-y-3">
                 <Button 
                   onClick={() => onBookNow(guide)}
-                  className="w-full bg-primary hover:bg-hover text-white font-semibold py-3"
+                  className="w-full bg-primary hover:bg-hover text-black font-semibold py-3"
                   size="lg"
                 >
                   <Calendar className="w-4 h-4 mr-2" />
@@ -245,8 +243,8 @@ const GuideProfile: React.FC<GuideProfileProps> = ({ guide, isOpen, onClose, onB
               </div>
 
               {/* Trust Indicators */}
-              <div className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-                <div className="pt-6 p-4">
+              <Card>
+                <CardContent className="pt-6">
                   <div className="space-y-3 text-sm">
                     <div className="flex items-center gap-2 text-secondary">
                       <CheckCircle className="w-4 h-4" />
@@ -261,14 +259,12 @@ const GuideProfile: React.FC<GuideProfileProps> = ({ guide, isOpen, onClose, onB
                       <span>Licensed guide</span>
                     </div>
                   </div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default GuideProfile;
+}
