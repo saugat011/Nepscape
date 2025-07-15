@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Search, MapPin, Star, DollarSign, Globe } from 'lucide-react';
-import { FilterState } from './types';
+import { FilterState } from '@/app/(user)/book/stays/data';
 
 interface SearchFiltersProps {
   filters: FilterState;

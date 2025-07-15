@@ -2,7 +2,7 @@
 "use client"
 import React from 'react';
 import { Star } from 'lucide-react';
-import { Stay } from '@/app/(user)/book/stays/types'; // Adjust import path as needed
+import { Stay } from '@/app/(user)/book/stays/types'; 
 
 interface StayCardProps {
   stay: Stay;

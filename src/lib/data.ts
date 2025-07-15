@@ -18,11 +18,11 @@ export const navItems: NavItem[] = [
     ],
   },
   {
-    label: "Plan Trip",
+    label: "plantrip",
     dropdown: true,
     items: [
-      { label: "AI Trip Planner", href: "/plan-trip/ai-planner" },
-      { label: "Itinerary Builder", href: "/plan-trip/itinerary-builder" },
+      { label: "AI Trip Planner", href: "/plantrip/tripplanner" },
+      { label: "Itinerary Builder", href: "/plantrip/itinerarybuilder" },
     ],
   },
   {
