@@ -4,21 +4,21 @@ export const adventures = [
   {
     name: "Paragliding in Pokhara",
     description: "Soar over Phewa Lake and enjoy panoramic views of the Annapurna range.",
-    image: "/adventures/paragliding.jpg",
+    image: "/Paragliding in Pokhara.jpeg",
     tags: ["aerial", "extreme"],
     location: "Pokhara",
   },
   {
     name: "Ultralight Flight",
     description: "Fly above Pokhara valley and get a bird’s eye view of the Himalayas.",
-    image: "/adventures/ultralight.jpg",
+    image: "/Ultralight Flight.jpeg",
     tags: ["aerial"],
     location: "Pokhara",
   },
   {
     name: "Ziplining in Sarangkot",
     description: "Experience one of the world's steepest and fastest ziplines.",
-    image: "/adventures/zipline.jpg",
+    image: "/Ziplining in Sarangkot.jpeg",
     tags: ["aerial", "extreme"],
     location: "Sarangkot",
   },
@@ -27,7 +27,7 @@ export const adventures = [
   {
     name: "Bungee Jumping at Bhote Koshi",
     description: "Take the plunge from a 160m suspension bridge above a wild river.",
-    image: "/adventures/bungee.jpg",
+    image: "/Bungee Jumping at Bhote Koshi.jpeg",
     tags: ["extreme"],
     location: "Bhote Koshi",
   },
@@ -36,7 +36,7 @@ export const adventures = [
   {
     name: "Everest Base Camp Trek",
     description: "Challenge yourself with a 12-day trek to the foot of the tallest mountain.",
-    image: "/adventures/ebc.jpg",
+    image: "/Everest Base Camp Trek.jpeg",
     tags: ["trek", "mountain"],
     location: "Everest Region",
   },
@@ -45,7 +45,7 @@ export const adventures = [
   {
     name: "Meditation Retreat in Lumbini",
     description: "Reconnect with your inner self in the birthplace of Buddha.",
-    image: "/adventures/meditation.jpg",
+    image: "/Everest Base Camp Trek.jpeg",
     tags: ["spiritual"],
     location: "Lumbini",
   },
@@ -54,7 +54,7 @@ export const adventures = [
   {
     name: "Jungle Safari in Chitwan",
     description: "Spot rhinos, tigers, and elephants in the wild on a jeep or elephant safari.",
-    image: "/adventures/safari.jpg",
+    image: "/Jungle Safari in Chitwan.jpeg",
     tags: ["wildlife"],
     location: "Chitwan",
   },
@@ -63,7 +63,7 @@ export const adventures = [
   {
     name: "Pilgrimage to Muktinath",
     description: "Visit the high-altitude temple sacred to both Hindus and Buddhists.",
-    image: "/adventures/muktinath.jpg",
+    image: "/Pilgrimage to Muktinath.jpeg",
     tags: ["spiritual", "mountain"],
     location: "Muktinath",
   },
